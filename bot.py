@@ -1,3 +1,4 @@
+import os
 import discord
 from discord.ext import commands
 import asyncio
@@ -806,4 +807,5 @@ async def reset_user_error(ctx, error):
 # Run the bot
 # IMPORTANT: Replace "YOUR_BOT_TOKEN_HERE" with your actual Discord bot token.
 # The token provided in the original context is likely a placeholder or expired.
-bot.run("")
+bot.run(os.getenv(TOKEN))
+
