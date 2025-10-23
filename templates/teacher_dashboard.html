@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Teacher Dashboard</title>
+</head>
+<body>
+<h2>Welcome Teacher: {{ email }}</h2>
+<h3>Your Class: {{ class_name }} | Section: {{ section_name }}</h3>
+
+<table border="1">
+    <tr>
+        <th>Name</th>
+        <th>Special Needs</th>
+        <th>Progress</th>
+        <th>Accommodations</th>
+        <th>Notes</th>
+    </tr>
+    {% for student in students %}
+    <tr>
+        <td>{{ student.name }}</td>
+        <td>{{ student.special_needs }}</td>
+        <td>{{ student.progress }}</td>
+        <td>{{ student.accommodations }}</td>
+        <td>{{ student.notes }}</td>
+    </tr>
+    {% endfor %}
+</table>
+</body>
+</html>
